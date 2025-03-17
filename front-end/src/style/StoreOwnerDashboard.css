@@ -1,0 +1,369 @@
+/* StoreOwnerDashboard.css */
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2d3748;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.navbar button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background: #f7fafc;
+    color: #4a5568;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navbar button:hover {
+    background: #edf2f7;
+    transform: translateY(-1px);
+}
+
+.navbar button.active {
+    background: #4299e1;
+    color: white;
+    box-shadow: 0 2px 4px rgba(66, 153, 225, 0.3);
+}
+
+/* Home Section Styles */
+.home-section {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.home-section h2 {
+    color: #2d3748;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #4299e1;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.store-details p {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #f7fafc;
+    border-radius: 8px;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    border: 1px solid #e2e8f0;
+}
+
+.store-details strong {
+    color: #4299e1;
+    min-width: 140px;
+    font-weight: 600;
+}
+
+/* Profile Section Styles */
+.profile-container {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.profile-title {
+    color: #2d3748;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+
+.profile-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #4299e1;
+    border-radius: 2px;
+}
+
+/* Improved Profile Form Layout */
+.profile-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.profile-card .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-card label {
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.profile-card input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.profile-card input:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+.profile-card input:disabled {
+    background: #f8fafc;
+    color: #718096;
+    border-color: #e2e8f0;
+    cursor: not-allowed;
+}
+
+.rating-display {
+    padding: 0.75rem;
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    color: #48bb78;
+    font-weight: 600;
+}
+
+/* Button Styles */
+.button-container {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
+
+.edit-btn,
+.save-btn {
+    padding: 0.8rem 1.75rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.edit-btn {
+    background: #4299e1;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #3182ce;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(66, 153, 225, 0.2);
+}
+
+.save-btn {
+    background: #48bb78;
+    color: white;
+}
+
+.save-btn:hover {
+    background: #38a169;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(72, 187, 120, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 0 0.5rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .store-details p {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+
+    .profile-card {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .edit-btn,
+    .save-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .home-section,
+    .profile-container {
+        padding: 1rem;
+    }
+
+    .profile-title {
+        font-size: 1.5rem;
+    }
+
+    .store-details p {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    .profile-card {
+        padding: 1rem;
+    }
+
+    .profile-card input {
+        font-size: 0.95rem;
+    }
+}
+
+/* Button styles */
+/* Button styles */
+.logout {
+    background-color: #0e2737;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Default <a> styles inside the button */
+.logout a {
+    text-decoration: none;
+    color: #2d3748;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* Hover effect only on button */
+.logout:hover {
+    background-color: #4299e1;
+    /* Change button background on hover */
+}
+
+/* Ensure text color also changes when hovering */
+.logout:hover a {
+    color: #4299e1;
+}
+
+/* Reviews Section */
+.reviews-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.reviews-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Responsive Table Wrapper */
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* Table Styling */
+.reviews-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.reviews-table th,
+.reviews-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.reviews-table th {
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+.reviews-table tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.reviews-table tbody tr:hover {
+    background: #f1f1f1;
+    transition: 0.3s ease-in-out;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .reviews-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .reviews-table th,
+    .reviews-table td {
+        padding: 10px;
+    }
+}

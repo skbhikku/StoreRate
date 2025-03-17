@@ -1,0 +1,319 @@
+/* AdminDashboard.css */
+
+/* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fa;
+  color: #2d3748;
+}
+
+/* Container */
+.admin-dashboard-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  animation: admin-fadeIn 0.5s ease-in;
+}
+
+/* Animations */
+@keyframes admin-fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Navbar Styles */
+.admin-navbar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-nav-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: #f7fafc;
+  color: #4a5568;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.admin-nav-button:hover {
+  background: #edf2f7;
+  transform: translateY(-1px);
+}
+
+.admin-nav-button.active {
+  background: #4299e1;
+  color: white;
+  box-shadow: 0 2px 4px rgba(66, 153, 225, 0.3);
+}
+
+.admin-logout-button {
+  background: #fc8181;
+  margin-left: auto;
+}
+
+.admin-logout-button:hover {
+  background: #f56565;
+}
+
+.admin-logout-button a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Section Styles */
+.admin-section {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.admin-dashboard-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.admin-dashboard-subtitle {
+  color: #718096;
+  margin-bottom: 2rem;
+}
+
+/* Form Styles */
+.admin-form-container {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.admin-form-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #4299e1;
+}
+
+/* Normal Form Layout */
+.admin-form {
+  display: block;
+  /* Removes flexbox grid */
+  width: 100%;
+  max-width: 500px;
+  /* Optional: Adjust max width for better readability */
+  margin: 0 auto;
+  /* Centers the form */
+}
+
+.admin-form-group {
+  margin-bottom: 1.5rem;
+  /* Space between input fields */
+}
+
+.admin-form-group label {
+  display: block;
+  /* Ensures label is above input */
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+}
+
+.admin-form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.admin-form-input:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+.admin-form-button {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background: #48bb78;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+  /* Adds space above button */
+}
+
+.admin-form-button:hover {
+  background: #38a169;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(72, 187, 120, 0.2);
+}
+
+/* Table Styles */
+.admin-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.admin-data-table th,
+.admin-data-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.admin-data-table th {
+  background: #4299e1;
+  color: white;
+  font-weight: 600;
+}
+
+.admin-data-table tr:hover {
+  background-color: #f7fafc;
+}
+
+/* Loading Styles */
+.admin-loading {
+  text-align: center;
+  padding: 2rem;
+  color: #718096;
+}
+
+/* Profile Section */
+.profile-container {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: auto;
+}
+
+.profile-container label {
+  display: block;
+  font-weight: 600;
+  color: #4a5568;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-container input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+  margin-bottom: 1rem;
+}
+
+.profile-container input:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+.profile-container input:disabled {
+  background: #f8fafc;
+  color: #718096;
+  border-color: #e2e8f0;
+  cursor: not-allowed;
+}
+
+/* Button Styles */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.edit-btn,
+.save-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.edit-btn {
+  background: #4299e1;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #3182ce;
+}
+
+.save-btn {
+  background: #48bb78;
+  color: white;
+}
+
+.save-btn:hover {
+  background: #38a169;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-navbar {
+    flex-wrap: wrap;
+  }
+
+  .admin-form {
+    flex-direction: column;
+  }
+
+  .admin-data-table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-section {
+    padding: 1rem;
+  }
+
+  .admin-dashboard-title {
+    font-size: 1.5rem;
+  }
+
+  .admin-form-title {
+    font-size: 1.2rem;
+  }
+}
